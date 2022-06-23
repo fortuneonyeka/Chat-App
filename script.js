@@ -3,16 +3,26 @@ const messageInput = document.getElementById("message-input")
 const messageContainer = document.getElementById("message-container")
 
 
-const appendMessage = (message) => {
+
+
+
+function appendMessage (message) {
   const messageElement  = document.createElement("div")
   messageElement.innerText = message
   messageContainer.append(messageElement)
 }
 
 const socket = io('http://localhost:8000')
+const name = prompt("What is your Name?")
+appendMessage("You Joined")
+socket.emit("new-user", name)
 
 socket.on('chart-message', data => {
   appendMessage(data)
+})
+
+socket.on('user-connected', name => {
+  appendMessage(`${name} connected`)
 })
 
 
