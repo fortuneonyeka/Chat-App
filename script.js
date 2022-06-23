@@ -18,7 +18,7 @@ appendMessage("You Joined")
 socket.emit("new-user", name)
 
 socket.on('chart-message', data => {
-  appendMessage(data)
+  appendMessage(`${data.name}: ${data.message}`)
 })
 
 socket.on('user-connected', name => {

@@ -13,6 +13,6 @@ io.on('connection', socket=> {
     socket.broadcast.emit('user-connected', name)
   })
   socket.on('send-chart-message', message => {
-    socket.broadcast.emit('chart-message', message)
+    socket.broadcast.emit('chart-message', {message: message, name: users[socket.id] })
   })
 })
