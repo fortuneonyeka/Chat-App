@@ -14,7 +14,7 @@ function appendMessage (message) {
 
 const socket = io('http://localhost:8000')
 const name = prompt("What is your Name?")
-appendMessage("You Joined")
+appendMessage(`${name} You joined`)
 socket.emit("new-user", name)
 
 socket.on('chart-message', data => {
@@ -22,11 +22,11 @@ socket.on('chart-message', data => {
 })
 
 socket.on('user-connected', name => {
-  appendMessage(`${name} connected`)
+  appendMessage(`${name} Joined the chat`)
 })
 
 socket.on('user-disconnected', name => {
-  appendMessage(`${name} disconnected`)
+  appendMessage(`${name} left the chat`)
 })
 
 
