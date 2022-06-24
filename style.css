@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* background-color: black; */
+  color: white;
+}
+
+#head {
+  color:black;
+
+}
+
+#message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+#message-container div {
+  background-color: #ccc;
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+#message-container div:nth-child(2n) {
+  background-color: aquamarine;
+  color: black;
+}
+
+#message-input {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+
+}
+
+#message-input:hover {
+  background-color: greenyellow;
+}
+
+#send-button {
+  width: 200px;
+  font-size: 20px;
+  height: 50px;
+  margin-left:70px ;
+  background-color:aquamarine;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: none;
+}
+
+#send-button:hover {
+  background-color: greenyellow;
+}
+
+#send-container {
+ margin-bottom: 20px;
+ margin-left: 18px;
+}
